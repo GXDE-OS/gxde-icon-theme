@@ -1,4 +1,4 @@
-Source: debiandde-icon-theme
+Source: deepin-icon-theme
 Section: x11
 Priority: optional
 Maintainer: gfdgd xi <3025613752@qq.com>, Deepin Packages Builder <packages@deepin.com>
@@ -8,7 +8,7 @@ Build-Depends:
  gtk-update-icon-cache,
  x11-apps
 
-Package: debiandde-icon-theme
+Package: deepin-icon-theme
 Architecture: all
 Depends: papirus-icon-theme
 Conflicts: deepin-cursor-theme
