@@ -12,7 +12,7 @@ Package: gxde-icon-theme
 Architecture: all
 Depends: papirus-icon-theme
 Conflicts: gxde-cursor-theme
-Replace: deepin-icon-theme
+Replaces: deepin-icon-theme
 Recommends: gxde-sea-icon-theme
 Description: GXDE Icons
  This package is GXDEIconTheme 
@@ -20,6 +20,6 @@ Description: GXDE Icons
 Package: gxde-sea-icon-theme
 Architecture: all
 Conflicts: gxde-icon-theme (<< 15.12.65)
-Replace: sea-icon-theme
+Replaces: sea-icon-theme
 Description: GXDE Sea Icons 
  This package is GXDEIconTheme Sea
