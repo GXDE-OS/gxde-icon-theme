@@ -1,0 +1,4 @@
+[Icon Theme]
+Name=GXDE
+Comment=default cursor theme of GXDE
+Inherits=GXDE

@@ -1,22 +1,25 @@
-Source: deepin-icon-theme
+Source: gxde-icon-theme
 Section: x11
 Priority: optional
-Maintainer: gfdgd xi <3025613752@qq.com>, Deepin Packages Builder <packages@deepin.com>
+Maintainer: gfdgd xi <3025613752@qq.com>
 Standards-Version: 3.9.8
 Build-Depends:
  debhelper (>= 9),
  gtk-update-icon-cache,
  x11-apps
 
-Package: deepin-icon-theme
+Package: gxde-icon-theme
 Architecture: all
 Depends: papirus-icon-theme
-Conflicts: deepin-cursor-theme
-Description: Deepin Icons
- This package is DeepinIconTheme 
+Conflicts: gxde-cursor-theme
+Replace: deepin-icon-theme
+Recommends: gxde-sea-icon-theme
+Description: GXDE Icons
+ This package is GXDEIconTheme 
 
-Package: sea-icon-theme
+Package: gxde-sea-icon-theme
 Architecture: all
-Conflicts: deepin-icon-theme (<< 15.12.65)
-Description: Deepin Sea Icons 
- This package is DeepinIconTheme Sea
+Conflicts: gxde-icon-theme (<< 15.12.65)
+Replace: sea-icon-theme
+Description: GXDE Sea Icons 
+ This package is GXDEIconTheme Sea
