@@ -38,6 +38,7 @@ clean:
 
 install-icons:
 	mkdir -p $(DESTDIR)$(PREFIX)/share/icons/gxde
+	cp deepin $(DESTDIR)$(PREFIX)/share/icons/
 	cp -r gxde/* $(DESTDIR)$(PREFIX)/share/icons/gxde
 	mkdir -p $(DESTDIR)$(PREFIX)/share/icons/gxde-dark
 	cp -r gxde-dark/* $(DESTDIR)$(PREFIX)/share/icons/gxde-dark

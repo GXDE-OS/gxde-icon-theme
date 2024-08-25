@@ -11,8 +11,9 @@ Build-Depends:
 Package: gxde-icon-theme
 Architecture: all
 Depends: papirus-icon-theme
-Conflicts: gxde-cursor-theme
+Conflicts: gxde-cursor-theme, deepin-icon-theme
 Replaces: deepin-icon-theme
+Provides: deepin-icon-theme
 Recommends: gxde-sea-icon-theme
 Description: GXDE Icons
  This package is GXDEIconTheme 
