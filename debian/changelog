@@ -1,12 +1,13 @@
-gxde-icon-theme (2024.12.29) UNRELEASED; urgency=medium
+gxde-icon-theme (2025.01.24) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * add weixin and wps
 
   [ gfdgd_xi ]
   * 新增 kmre 图标
+  * 默认使用 adwaita 
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 29 Dec 2024 10:09:22 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Fri, 24 Jan 2025 16:13:01 +0800
 
 gxde-icon-theme (2024.08.28) UNRELEASED; urgency=medium
 

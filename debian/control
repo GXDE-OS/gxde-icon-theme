@@ -10,7 +10,7 @@ Build-Depends:
 
 Package: gxde-icon-theme
 Architecture: all
-Depends: papirus-icon-theme
+Depends: adwaita-icon-theme
 Conflicts: gxde-cursor-theme, deepin-icon-theme
 Replaces: deepin-icon-theme
 Provides: deepin-icon-theme
