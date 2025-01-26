@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=GXDE
 Comment=Default icon theme for GXDE
-Inherits=Adwaita
+Inherits=Papirus,Adwaita
 
 Example=x-directory-normal
 

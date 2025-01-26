@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=GXDE-Sea
 Comment=Default icon theme for GXDE
-Inherits=gxde,Adwaita,GXDE
+Inherits=gxde,Papirus,Adwaita,GXDE
 
 Example=x-directory-normal
 
