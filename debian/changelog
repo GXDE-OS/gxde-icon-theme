@@ -1,4 +1,4 @@
-gxde-icon-theme (2025.01.26) UNRELEASED; urgency=medium
+gxde-icon-theme (2025.07.16) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * add weixin and wps
@@ -6,8 +6,9 @@ gxde-icon-theme (2025.01.26) UNRELEASED; urgency=medium
   [ gfdgd_xi ]
   * 新增 kmre 图标
   * 默认使用 papirus-icon-theme，但不再要求强制安装
+  * 新增 MimeType 类型为 application/vnd.microsoft.portable-executable 的图标
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 26 Jan 2025 10:20:25 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Wed, 16 Jul 2025 08:30:47 +0800
 
 gxde-icon-theme (2024.08.28) UNRELEASED; urgency=medium
 
