@@ -1,0 +1,45 @@
+# Maintainer: CharOfString <root@charofstring.cc>
+pkgbase=gxde-icon-theme-git
+pkgname=('gxde-icon-theme-git' 'gxde-sea-icon-theme-git')
+pkgver=2026.03.20
+pkgrel=1
+pkgdesc='GXDE icon theme'
+arch=('any')
+url="https://github.com/GXDE-OS/gxde-icon-theme"
+license=('GPL-3.0-or-later')
+makedepends=('git' 'gtk-update-icon-cache' 'xorg-xcursorgen')
+options=('!strip')
+source=()
+sha512sums=()
+
+# 直接使用 PKGBUILD 所在的 git 仓库作为源码 ・ Build from the git checkout this PKGBUILD lives in.
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+build() {
+  # 与 debian/rules 相同：检查图标并用 xcursorgen 生成 loginspinner 光标
+  # Same as debian/rules: check the icons and generate the loginspinner
+  # cursors with xcursorgen.
+  make -C "$(_srcroot)"
+}
+
+package_gxde-icon-theme-git() {
+  depends=('adwaita-icon-theme')
+  optdepends=('gxde-sea-icon-theme-git: GXDE Sea icon theme')
+  provides=('gxde-icon-theme' 'deepin-icon-theme')
+  conflicts=('gxde-icon-theme' 'deepin-icon-theme')
+
+  # 与 debian/gxde-icon-theme.install 相同 ・ Same as debian/gxde-icon-theme.install.
+  install -d "$pkgdir/usr/share/icons"
+  cp -r --no-preserve=ownership "$(_srcroot)"/{gxde,deepin,gxde-dark} "$pkgdir/usr/share/icons/"
+}
+
+package_gxde-sea-icon-theme-git() {
+  pkgdesc='GXDE Sea icon theme'
+  provides=('gxde-sea-icon-theme')
+  conflicts=('gxde-sea-icon-theme' 'sea-icon-theme')
+
+  install -d "$pkgdir/usr/share/icons"
+  cp -r --no-preserve=ownership "$(_srcroot)/gxde-Sea" "$pkgdir/usr/share/icons/"
+}
