@@ -1,6 +1,6 @@
 # Maintainer: CharOfString <root@charofstring.cc>
-pkgbase=gxde-icon-theme-git
-pkgname=('gxde-icon-theme-git' 'gxde-sea-icon-theme-git')
+pkgbase=gxde-icon-theme
+pkgname=('gxde-icon-theme' 'gxde-sea-icon-theme')
 pkgver=2026.03.20
 pkgrel=1
 pkgdesc='GXDE icon theme'
@@ -24,21 +24,23 @@ build() {
   make -C "$(_srcroot)"
 }
 
-package_gxde-icon-theme-git() {
+package_gxde-icon-theme() {
   depends=('adwaita-icon-theme')
-  optdepends=('gxde-sea-icon-theme-git: GXDE Sea icon theme')
-  provides=('gxde-icon-theme' 'deepin-icon-theme')
-  conflicts=('gxde-icon-theme' 'deepin-icon-theme')
+  optdepends=('gxde-sea-icon-theme: GXDE Sea icon theme')
+  provides=('deepin-icon-theme' "gxde-icon-theme-git=$pkgver")
+  conflicts=('deepin-icon-theme' 'gxde-icon-theme-git')
+  replaces=('gxde-icon-theme-git')
 
   # 与 debian/gxde-icon-theme.install 相同 ・ Same as debian/gxde-icon-theme.install.
   install -d "$pkgdir/usr/share/icons"
   cp -r --no-preserve=ownership "$(_srcroot)"/{gxde,deepin,gxde-dark} "$pkgdir/usr/share/icons/"
 }
 
-package_gxde-sea-icon-theme-git() {
+package_gxde-sea-icon-theme() {
   pkgdesc='GXDE Sea icon theme'
-  provides=('gxde-sea-icon-theme')
-  conflicts=('gxde-sea-icon-theme' 'sea-icon-theme')
+  provides=("gxde-sea-icon-theme-git=$pkgver")
+  conflicts=('sea-icon-theme' 'gxde-sea-icon-theme-git')
+  replaces=('gxde-sea-icon-theme-git')
 
   install -d "$pkgdir/usr/share/icons"
   cp -r --no-preserve=ownership "$(_srcroot)/gxde-Sea" "$pkgdir/usr/share/icons/"
